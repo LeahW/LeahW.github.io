@@ -9,6 +9,14 @@
     .img-circle {
      border: 5px solid gray;
     }
+  .show {
+  background: red;
+  height: 50px;
+  width: 100px;
+  }
+  .sandbox {
+  color: purple;
+  }
   </style>
   </head>
   
@@ -37,6 +45,8 @@
  <h3>JS.andbox</h3>
  <p>This is where I test code!</p>
  <br>
+ <button class='show'><p> Show </p> </button>
+  <button class='sandbox'> Sandbox </button>
  
 </div>
     
@@ -57,5 +67,9 @@
           $(this).tab('show');
         });
       });
+      $('button').on('click', function() {
+      $(this).toggleClass('show');
+    });
+
   </script>
   </body>
