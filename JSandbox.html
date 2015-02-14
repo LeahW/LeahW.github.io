@@ -1,6 +1,13 @@
 <head>
 <title>JS.andbox</title>
+<link rel="stylesheet" type="text/css" href="/css/main.css">
 <style>
+.whitespace {
+     margin: 15px;
+    }
+    .img-circle {
+     border: 5px solid gray;
+    }
   .show {
   background: purple;
   height: 50px;
@@ -22,6 +29,8 @@ div class="row col-md-12 whitespace"></div>
   <button class='sandbox'> Sandbox </button>
   
 </div>
+<script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 <script>
    $('button').on('click', function() {
       $(this).toggleClass('show');
