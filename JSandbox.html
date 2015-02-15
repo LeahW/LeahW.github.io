@@ -15,6 +15,18 @@
 height: 195px;   
 width: 508px;
  }
+ .middle {
+      background-image: url(https://lh5.googleusercontent.com/-L9k3ukEjS3E/VOCzpQLAVGI/AAAAAAAAArc/Ks1bONJE65I/w508-h90-no/poptmiddle.png);
+ 
+      height: 508px;
+      width:90px;
+ }
+ .bottom {
+      background-image: url(https://lh5.googleusercontent.com/-f90FUqI6VuM/VOCzpYo6XbI/AAAAAAAAAr4/HMM2u8Q6qys/w509-h147-no/popbottom.png);
+ 
+height: 147px;
+width: 509px;
+}
  
   </style>
 </head>
@@ -27,8 +39,8 @@ width: 508px;
  <br>
  
  <div class="col-md-8"><button class='smiley1'> Eyes </button></div>
- <div class="col-md-8"><button class='smiley2'> Eyes </button></div>
- <div class="col-md-8"><button class='smiley3'> Eyes </button></div>
+ <div class="col-md-8"><button class='smiley2'> Nose </button></div>
+ <div class="col-md-8"><button class='smiley3'> Mouth </button></div>
  
  <br>
  </div>
@@ -37,6 +49,12 @@ width: 508px;
 <script>
    $('.smiley1').on('click', function() {
       $(this).toggleClass('top');
+    });
+    $('.smiley2').on('click', function() {
+         $(this).toggleClass('middle');
+    });
+    $('smiley3').on('click', function() {
+         $(this).toggleClass('bottom');
     });
 </script>
 
