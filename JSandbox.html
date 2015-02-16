@@ -47,7 +47,7 @@ width: 509px;
  
  <br>
  <br>
-  <div class="row col-md-10 message"><button class="btn-msg"> Personalized Greeting! </button></div>
+  <div class="container well col-md-10 message"><button class="btn-msg"> Personalized Greeting! </button></div>
   
  </div>
 <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
@@ -62,12 +62,14 @@ width: 509px;
     $('.smiley3').on('click', function() {
          $(this).toggleClass('bottom');
     });
-    var msg = $('<p>Have a nice day, </p>');
+    var msg = $('<p> Hello, </p>');
+    var msg2 = $('<p> have a wonderful day! </p>');
 
 $('.btn-msg').on('click', function(name) { 
 var name = prompt("What is your name?")
 $('.message').append(msg); 
   $('.message').append(name);
+  $('.message').append(msg2);
   $(this).toggleClass('colorChange');
  })
 </script>
