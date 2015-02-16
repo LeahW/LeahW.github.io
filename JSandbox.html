@@ -67,10 +67,13 @@ width: 509px;
     });
     
     
-$('.btn-msg').on('click', function(name) { 
+$('.btn-msg').on('click', function(name) {
+      $(this).toggleClass('colorChange');
+      
 var name = prompt("What is your name?");
+
   $('.message').append('Hello, '+name+', thanks for visiting my page!');
-    $('button').toggleClass('colorChange');
+    
  })
 </script>
 
