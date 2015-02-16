@@ -68,6 +68,7 @@ width: 509px;
     
     
 $('.btn-msg').on('click', function(name) {
+      $('.btn-msg').removeClass('btn-msg');
       $('.btn-msg').toggleClass('colorChange');
       
 var name = prompt("What is your name?");
