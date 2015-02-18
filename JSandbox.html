@@ -15,6 +15,11 @@
      height: 195px;   
      width: 508px;
  }
+ .top2 {
+       background-image: url("https://lh3.googleusercontent.com/-7Hz_Jlz_D_k/VOCzpKXbBZI/AAAAAAAAAsE/DTh9YBbk2b8/w528-h193-no/Glassestop.png");
+       height: 195px;
+       width: 508px;
+ }
  .middle {
       background-image: url("https://lh5.googleusercontent.com/-L9k3ukEjS3E/VOCzpQLAVGI/AAAAAAAAArc/Ks1bONJE65I/w508-h90-no/poptmiddle.png");
  
@@ -80,11 +85,11 @@ var name = prompt("What is your name?");
  
  $('.rando-but').on('click', function() {
        var rando = Math.random()*10;
-       $('.rando').append(' Random number: '+rando);
+       $('.rando').append('Eyes: '+rando);
        if (rando >= 5) {
              $('.rando-but').addClass('top');
        } else {
-             $('.rando').append(' high! ');
+             $('.rando-but').addClass('top2');
        
        }
  })
