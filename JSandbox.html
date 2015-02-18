@@ -79,8 +79,14 @@ var name = prompt("What is your name?");
  });
  
  $('.rando-but').on('click', function() {
-       var rando = Math.random()*10000;
+       var rando = Math.random()*10;
        $('.rando').append(' Random number: '+rando);
+       if (rando >= 5) {
+             $('.rando').append(' low! ');
+       } else {
+             $('.rando').append(' high! ');
+       
+       }
  })
  
 </script>
