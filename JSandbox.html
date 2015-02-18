@@ -69,11 +69,6 @@ width: 509px;
 <div class="container well col-md-6 col-md-offset-3">
  <h3>JS.andbox</h3>
  <p>This is where I test code: </p>
- <br>
- 
- <div class="col-md-8"><button class='smiley1'> Eyes </button></div>
- <div class="col-md-8"><button class='smiley2'> Nose </button></div>
- <div class="col-md-8"><button class='smiley3'> Mouth </button></div>
  
  </div>
  <br>
@@ -90,17 +85,7 @@ width: 509px;
 <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 <script>
-   $('.smiley1').on('click', function() {
-      $(this).toggleClass('top');
-    });
-    $('.smiley2').on('click', function() {
-         $(this).toggleClass('middle');
-    });
-    $('.smiley3').on('click', function() {
-         $(this).toggleClass('bottom');
-    });
-    
-    
+   
 $('.btn-msg').on('click', function(name) {
       $('.btn-msg').removeClass('btn-msg');
       $(this).addClass('colorChange');
