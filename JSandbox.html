@@ -47,6 +47,16 @@
 height: 147px;
 width: 509px;
 }
+.bottom2 {
+      background-image: url("https://lh4.googleusercontent.com/-rHdueemzQ4k/VOCzowsil5I/AAAAAAAAArM/fhhuQ9Fr6cw/w528-h163-no/Glassesbottom.png");
+      height: 147px;
+      width 509px;
+}
+.bottom3 {
+      background-image: url("https://lh5.googleusercontent.com/-NNUfG-R5PlA/VOCzpyxUTqI/AAAAAAAAArs/M36K3MBAhOY/w507-h123-no/starbottom.png");
+      height: 147px;
+      width: 509px;
+}
 .btn-msg {
      background: #f00ff0;
 }
@@ -74,6 +84,7 @@ width: 509px;
   <div class="container well col-md-6 col-md-offset-3">
   <div class="row col-md-6 col-md-offset-3"><button class='rando-but'> Random Eyes </button><span class='rando'>  </span></div>
   <div class="row col-md-6 col-md-offset-3"><button class='rando-but2'> Random Nose </button><span class='rando2'> </span></div>
+  <div class="row col-md-6 col-md-offset-3"><button class='rando-but3'> Random Mouth </button><span class='rando3'> </span></div>
   </div>
  
 <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
@@ -135,6 +146,25 @@ var name = prompt("What is your name?");
              $('.rando-but2').removeClass('middle3');
              $('.rando-but2').removeClass('middle');
              $('.rando-but2').addClass('middle2');
+       
+       }
+ });
+ $('.rando-but3').on('click', function() {
+       var rando = Math.random()*10;
+       $('.rando3').append('!');
+       if (rando >= 7) {
+             $('.rando-but3').removeClass('bottom2');
+             $('.rando-but3').removeClass('bottom3');
+             $('.rando-but3').addClass('bottom');
+       } else if (rando >= 3) {
+              $('rando-but3').removeClass('bottom');
+              $('.rando-but3').removeClass('bottom2');
+             $('.rando-but3').addClass('bottom3');
+       }
+       else {
+             $('.rando-but3').removeClass('bottom3');
+             $('.rando-but3').removeClass('bottom');
+             $('.rando-but3').addClass('bottom2');
        
        }
  })
