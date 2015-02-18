@@ -31,6 +31,16 @@
       height: 90px;
       width:508px;
  }
+ .middle2 {
+       background-image: url("https://lh4.googleusercontent.com/-Kz-5imwBG_c/VOCzpLoXzpI/AAAAAAAAAr8/RY6GJt91gnY/w528-h71-no/Glassesmiddle.png");
+       height: 90px;
+       width: 508px;
+ }
+ .middle3 {
+       background-image:url ("https://lh3.googleusercontent.com/-FTL2BnfSbmQ/VOCzqEgF-NI/AAAAAAAAAro/LSIuFog5BZ4/w507-h109-no/starmiddle.png");
+       height: 90 px;
+       width: 508px;
+ }
  .bottom {
       background-image: url("https://lh5.googleusercontent.com/-f90FUqI6VuM/VOCzpYo6XbI/AAAAAAAAAr4/HMM2u8Q6qys/w509-h147-no/popbottom.png");
  
@@ -61,7 +71,8 @@ width: 509px;
        <span class="message">: </span>
   </div>
   </div>
-  <div class="container well col-md-6 col-md-offset-3"><button class='rando-but'> Random Eyes </button><span class='rando'>  </span></span></div>
+  <div class="container well col-md-6 col-md-offset-3"><button class='rando-but'> Random Eyes </button><span class='rando'>  </span></div>
+  <div class="container well col-md col-md-offset-3"><button class='rando-but2'> Random Nose </button><span class='rando2'> </span></div>
   
  
 <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
@@ -104,6 +115,25 @@ var name = prompt("What is your name?");
              $('.rando-but').removeClass('top3');
              $('rando-but').removeClass('top');
              $('.rando-but').addClass('top2');
+       
+       }
+ });
+ $('.rando-but2').on('click', function() {
+       var rando = Math.random()*10;
+       $('.rando2').append('!');
+       if (rando >= 7) {
+             $('.rando-but2').removeClass('middle2');
+             $('rando-but2').removeClass('middle3');
+             $('.rando-but2').addClass('middle');
+       } else if (rando >= 3) {
+              $('rando-but2').removeClass('middle');
+              $('.rando-but2').removeClass('middle2');
+             $('.rando-but2').addClass('middle3');
+       }
+       else {
+             $('.rando-but2').removeClass('middle3');
+             $('rando-but2').removeClass('middle');
+             $('.rando-but2').addClass('middle2');
        
        }
  })
