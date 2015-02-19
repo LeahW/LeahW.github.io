@@ -36,7 +36,7 @@ $('.fAndR').on('click', function() {
 });
 $('.isThere').on('click', function(patt) {
     var patt = prompt('Please enter a character')
-    var response2 = /patt/.test(sampleText);
+    var response2 = /(var patt)/.test(sampleText);
   $('.response2').append(response2);
 });
 </script>
