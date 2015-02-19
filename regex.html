@@ -5,12 +5,23 @@
 </style
 <body>
 <h2> Landing screen for future Regex practice page </h2>
-<div class='container well col-md-8 col-md-offset-2'></div>
+<div class='container well col-md-8 col-md-offset-2'>
+  <button class=textCount> Count the number of 'e' letters!</button>
+  <span class='response'></span>
+</div>
 <div class='container col-md-8 col-md-offset-2'>
 <p>  Back to <a href="http://leahw.github.io/">leahw.github.io</a></p>
 </div>
 <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 <script>
+
+$('.textCount').on('click', function() {
+  var sampleText = prompt("Please enter some text here!");
+  var patE = /e/;
+  var response = patE.test(sampleText);
+  $('.response').append(response);
+  
+})
 </script>
 </body>
