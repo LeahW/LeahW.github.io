@@ -16,7 +16,7 @@
   <button class='fAndR'> Find and replace a word </button>
     <span class='response'></span>
     <br>
-    <button class='isThere'> How many e letters? </button>
+    <button class='isThere'> Does text include this character? </button>
     <span class='response2'></span>
 </div>
 <div class='container col-md-8 col-md-offset-2'>
@@ -35,7 +35,7 @@ $('.fAndR').on('click', function() {
   
 });
 $('.isThere').on('click', function() {
-    var patt = /e/;
+    var patt = /(prompt('Please enter a character'))/;
     var response2 = patt.test(sampleText);
   $('.response2').append(response2);
 });
