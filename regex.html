@@ -47,12 +47,12 @@ $('.fAndR').on('click', function() {
 });
 $('.isThere').on('click', function(patt) {
     var text2 = prompt('Please enter some text!');
-    text2.toLowerCase();
-    var response1 = /a/.exec(text2);
-    var response2 = /e/.exec(text2);
-    var response3 = /i/.exec(text2);
-    var response4 = /o/.exec(text2);
-    var response5 = /u/.exec(text2);
+    var text3 = text2.toLowerCase();
+    var response1 = /a/.exec(text3);
+    var response2 = /e/.exec(text3);
+    var response3 = /i/.exec(text3);
+    var response4 = /o/.exec(text3);
+    var response5 = /u/.exec(text3);
   $('.response2').append(response1, response2, response3, response4, response5);
 });
 </script>
