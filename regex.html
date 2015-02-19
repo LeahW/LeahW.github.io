@@ -46,7 +46,8 @@ $('.fAndR').on('click', function() {
   
 });
 $('.isThere').on('click', function(patt) {
-    var text2 = prompt('Please enter some text!')
+    var text2 = prompt('Please enter some text!');
+    text2.toLowerCase();
     var response1 = /a/.exec(text2);
     var response2 = /e/.exec(text2);
     var response3 = /i/.exec(text2);
