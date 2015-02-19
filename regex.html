@@ -25,9 +25,9 @@
 <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 <script>
-
+var sampleText = 'I am a Stay at Home Mom with a background in Tech Support. Interested in modification projects for Kano and Robomow, as well as Front-end web design.';
 $('.fAndR').on('click', function() {
-  var sampleText = 'I am a Stay at Home Mom with a background in Tech Support. Interested in modification projects for Kano and Robomow, as well as Front-end web design.';
+ 
   var findText = prompt("Please enter any one word from above paragraph");
   var replaceText = prompt("Please choose a word to replace it");
   var response = sampleText.replace(findText, replaceText);
@@ -35,8 +35,7 @@ $('.fAndR').on('click', function() {
   
 });
 $('isThere').on('click', function() {
-  var sampleText = 'I am a Stay at Home Mom with a background in Tech Support. Interested in modification projects for Kano and Robomow, as well as Front-end web design.';
-  var patt = /e/;
+    var patt = /e/;
       var response2 = patt.test(sampleText);
   $('.response2').append(response2);
 });
