@@ -13,8 +13,11 @@
 <p>I am a Stay at Home Mom with a background in Tech Support. Interested in modification projects for Kano and Robomow, as well as Front-end web design.</p>
 
 </div>
-  <button class=textCount> Find and replace a word </button>
-  <span class='response'></span>
+  <button class='fAndR'> Find and replace a word </button>
+    <span class='response'></span>
+    <br>
+    <button class='isThere'> Do you have this character? </button>
+    <span class='response2'></span>
 </div>
 <div class='container col-md-8 col-md-offset-2'>
 <p>  Back to <a href="http://leahw.github.io/">leahw.github.io</a></p>
@@ -23,13 +26,19 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 <script>
 
-$('.textCount').on('click', function() {
+$('.fAndR').on('click', function() {
   var sampleText = 'I am a Stay at Home Mom with a background in Tech Support. Interested in modification projects for Kano and Robomow, as well as Front-end web design.';
   var findText = prompt("Please enter any one word from above paragraph");
   var replaceText = prompt("Please choose a word to replace it");
   var response = sampleText.replace(findText, replaceText);
   $('.response').append(response);
   
-})
+});
+$('isThere').on('click', function() {
+  var sampleText = 'I am a Stay at Home Mom with a background in Tech Support. Interested in modification projects for Kano and Robomow, as well as Front-end web design.';
+  var x = prompt('What character are you looking for?');
+    var response2 = /x/.test(sampleText);
+  $('.response2').append(response2);
+});
 </script>
 </body>
