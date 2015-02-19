@@ -34,9 +34,9 @@ $('.fAndR').on('click', function() {
   $('.response').append(response);
   
 });
-$('.isThere').on('click', function() {
-    var patt = /(prompt('Please enter a character'))/;
-    var response2 = patt.test(sampleText);
+$('.isThere').on('click', function(patt) {
+    var patt = prompt('Please enter a character')
+    var response2 = /patt/.test(sampleText);
   $('.response2').append(response2);
 });
 </script>
