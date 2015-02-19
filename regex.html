@@ -16,7 +16,7 @@
   <button class='fAndR'> Find and replace a word </button>
     <span class='response'></span>
     <br>
-    <button class='isThere'> Do you have this character? </button>
+    <button class='isThere'> How many e letters? </button>
     <span class='response2'></span>
 </div>
 <div class='container col-md-8 col-md-offset-2'>
@@ -36,8 +36,7 @@ $('.fAndR').on('click', function() {
 });
 $('isThere').on('click', function() {
   var sampleText = 'I am a Stay at Home Mom with a background in Tech Support. Interested in modification projects for Kano and Robomow, as well as Front-end web design.';
-  var x = prompt('What character are you looking for?');
-    var response2 = /x/.test(sampleText);
+      var response2 = /e/.test(sampleText);
   $('.response2').append(response2);
 });
 </script>
