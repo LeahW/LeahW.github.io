@@ -35,7 +35,7 @@ function Question(ques) {
   this.ques = ques;
   this.ask = function() {
     $('.question1').append(ques+"      ");
-    $('.question1').append("<button class='ab1y'> Yes </button>       <button class='ab1n'> No </button> <br>");
+    $('.question1').append("<span class='q1a'><button class='ab1y'> Yes </button>       <button class='ab1n'> No </button></span> <br>");
   };
 };
 
@@ -44,11 +44,11 @@ function Question(ques) {
   
    $('.ab1n').on('click', function() {
     $('.question1').append("Nope, it's not raining!   ");
-    $(this).addClass('hide');
+    $('.q1a').addClass('hide');
   });
   $('.ab1y').on('click', function() {
     $('.question1').append("Yes, it is raining!   ");
-    $(this).addClass('hide');
+    $('.q1a').addClass('hide');
   });
   
   });
