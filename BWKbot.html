@@ -5,6 +5,10 @@
 .whitespace {
   margin: 10px 40px;
 }
+.hide {
+  height: 1px;
+  width: 1px;
+}
 </style>
 </head>
 <div class="container well col-md-10 col-md-offset-1">
@@ -40,11 +44,11 @@ function Question(ques) {
   
    $('.ab1n').on('click', function() {
     $('.question1').append("Nope, it's not raining!   ");
-    $('.ably').remove();
+    $('.ably').addClass('hide');
   });
   $('.ab1y').on('click', function() {
     $('.question1').append("Yes, it is raining!   ");
-    $('.abln').remove();
+    $('.abln').addClass('hide');
   });
   
   });
