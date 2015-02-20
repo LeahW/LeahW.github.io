@@ -31,7 +31,7 @@ function Question(ques) {
   this.ques = ques;
   this.ask = function() {
     $('.question1').append(ques+"      ");
-    $('.question1').append("<button class='ab1y'> Yes </button>       <button class='ab1n'> No </button>");
+    $('.question1').append("<button class='ab1y'> Yes </button>       <button class='ab1n'> No </button> <br>");
   };
 };
 
@@ -39,5 +39,12 @@ function Question(ques) {
   Num1.ask(); 
   
   });
+  $('.ab1n').on('click', function() {
+    $('.question1').append("Nope, it's not raining!");
+  });
+  $('.ab1y').on('click', function() {
+    $('.question1').append("Yes, it is raining!");
+  });
+  
 </script>
 </body>
