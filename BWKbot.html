@@ -1,5 +1,5 @@
 <head>
-<title>Regex Practice</title>
+<title>BWK Bot</title>
 <link rel="stylesheet" type="text/css" href="/css/main.css">
 <style>
 .whitespace {
@@ -23,7 +23,7 @@ $('.qb1').on('click', function() {
 function Question(ques) {
   this.ques = ques;
   this.ask = function() {
-    $('.question1').append(ques);
+    $('.question1').append(ques+" <br> ");
     $('.question1').append("<button class='ab1'> Yes </button>");
   };
 };
