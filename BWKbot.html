@@ -20,13 +20,15 @@
 <script>
 
 $('.qb1').on('click', function() {
- $('.question1').append('it works');
-  });
-  
+function Question(ques) {
+  this.ques = ques;
+  this.ask = function() {
+    $('.question1').append('it works');
+  };
 
- /* var Num1 = new Question('Is it raining?', 'yes', 5);
+  var Num1 = new Question('Is it raining?');
   Num1.ask(); 
-});
-  */
+  
+  });
 </script>
 </body>
