@@ -11,6 +11,7 @@
 <p class="lead"> Welcome! </p>
 </div>
 <div class="container well col-md-8 col-md-offset-2">
+<button class="qb1">Question 1: </button>
   <span class="question1"></span>
 </div>
 <body>
@@ -18,15 +19,19 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 <script>
 
+$('.qb1').on('click', function() {
+  
 function Question(ques, ans, value) {
   this.ques = ques;
   this.ans = ans;
   this.value = value;
   this.ask = function() { $('.question1').append(ques);
   };
+};
   
   var Num1 = new Question('Is it raining?', 'yes', 5);
   Num1.ask;
+});
   
 </script>
 </body>
