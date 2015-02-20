@@ -60,7 +60,10 @@ width: 509px;
 .btn-msg {
      background: #f00ff0;
 }
- 
+ .hide {
+  height: 1px;
+  width: 1px;
+}
   </style>
 </head>
 <body>
@@ -83,6 +86,14 @@ width: 509px;
   <div class="row col-md-6 col-md-offset-3"><button class='rando-but3'> Random Mouth </button><span class='rando3'> </span></div>
   </div>
   <br>
+  <div class="container well col-md-8 col-md-offset-2">
+<button class='qb1'> Let's talk about the weather </button>
+<br>
+
+<div class="container well col-md-8 col-md-offset-2">
+  <span class='question1'></span>
+</div>
+</div>
   <div class="container col-md-5 col-md-offset-3">
   <br>
  <p>  Back to <h4><a href="http://leahw.github.io/">leahw.github.io</a></h4></p>
@@ -154,7 +165,28 @@ var name = prompt("What is your name?");
              $('.rando-but3').addClass('bottom2');
        
        }
- })
+ });
+ $('.qb1').on('click', function() {
+function Question(ques) {
+  this.ques = ques;
+  this.ask = function() {
+    $('.question1').append(ques+"      ");
+    $('.question1').append("<span class='q1a'><button class='ab1y'> Yes </button>       <button class='ab1n'> No </button></span> <br>");
+  };
+};
+  var Num1 = new Question('Is it raining?');
+  Num1.ask(); 
+  
+   $('.ab1n').on('click', function() {
+    $('.question1').append("Nope, it's not raining! <br>");
+    $('.q1a').addClass('hide');
+  });
+  $('.ab1y').on('click', function() {
+    $('.question1').append("Yes, it is raining! <br>");
+    $('.q1a').addClass('hide');
+  });
+  
+  });
  
 </script>
 
