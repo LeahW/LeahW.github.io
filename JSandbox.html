@@ -111,7 +111,8 @@ function reverse(aString) {
 $('.btn-revstring').on('click', function() {
       $(this).removeClass('btn-revstring')
       $(this).addClass('colorChange');
-     $('.revstring').append(reverse('This is a string'));
+      var aString = prompt("Please enter a string:");
+     $('.revstring').append(reverse(aString));
  });
  
  $('.rando-but').on('click', function() {
