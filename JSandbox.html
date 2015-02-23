@@ -106,9 +106,9 @@ width: 509px;
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 <script>
 function reverse(aString) {
-      return (aString).split("").reverse().join("");
+      return aString.split("").reverse().join("");
 }   
-$('.btn-revstring').on('click', function(name) {
+$('.btn-revstring').on('click', function() {
       $(this).removeClass('btn-revstring')
       $(this).addClass('colorChange');
       var hardCodedString = 'This is a hard-coded string';
