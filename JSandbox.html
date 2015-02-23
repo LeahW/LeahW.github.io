@@ -107,13 +107,12 @@ width: 509px;
 <script>
 function reverse(aString) {
       return aString.split("").reverse().join("");
-}   
+};   
 $('.btn-revstring').on('click', function() {
       $(this).removeClass('btn-revstring')
       $(this).addClass('colorChange');
-      var hardCodedString = 'This is a hard-coded string';
      $('.revstring').append(reverse('This is a string'));
-}
+};
  });
  
  $('.rando-but').on('click', function() {
