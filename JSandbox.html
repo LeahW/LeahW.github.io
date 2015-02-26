@@ -112,9 +112,9 @@ width: 509px;
 <script>
 function reverse(aString) {
       return aString.split("").reverse().join("");
-};   
+  
 $('.btn-revstring').on('click', function() {
-      $(this).removeClass('btn-revstring')
+      $(this).removeClass('btn-revstring');
       $(this).addClass('colorChange');
       var aString = prompt("Please enter a string:");
      $('.revstring').append(reverse(aString));
