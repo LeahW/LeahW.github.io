@@ -10,10 +10,7 @@
 .whitespace {
       margin: 15px;
     }
- .colorChange {
-      background: #f0fff0;
-      
- }
+ 
  .top {
       background-image: url("https://lh6.googleusercontent.com/-CeSc0xomKGo/VOCzpuvojbI/AAAAAAAAAr0/ULkPyU55T9U/w508-h195-no/popttop.png");
  
@@ -83,6 +80,9 @@ width: 509px;
  <br>
   <div class="container well col-md-6 col-md-offset-3"><button class="btn-revstring"> Reverse a String! </button>
        <span class="revstring">: </span>
+       <br>
+       <button class="btn-factorial"> Factorial of a Number! </button>
+       span class="facstring">: </span>
   </div>
   
   <div class="container well col-md-6 col-md-offset-3">
@@ -114,11 +114,23 @@ function reverse(aString) {
       return aString.split("").reverse().join("");
   
 $('.btn-revstring').on('click', function() {
-      $(this).removeClass('btn-revstring');
-      $(this).addClass('colorChange');
       var aString = prompt("Please enter a string:");
      $('.revstring').append(reverse(aString));
  });
+ 
+ function factorial(num) {
+       if (num === 0) {
+             return 1;
+       } else {
+             return  n * factorial(num-1);
+       };
+ };
+ 
+ $('.btn-factorial').on('click', function() {
+       var num = prompt("Please enter a number:");
+       $('.facstring').append(factorial(num));
+ });
+ 
  
  $('.rando-but').on('click', function() {
        var rando = Math.random()*10;
