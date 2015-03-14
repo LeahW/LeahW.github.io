@@ -30,26 +30,14 @@
 <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 <script>
+
+function _feed(s) {
+  alert("Your private snippet is: " + s['private_snippet']);
+};
 $('.qb1').on('click', function() {
   _feed(s) 
   
 };
-  var Num1 = new Question('Is it raining?');
-  Num1.ask(); 
-  
-   $('.ab1n').on('click', function() {
-    $('.question1').append("Nope, it's not raining! <br>");
-    $('.q1a').addClass('hide');
-  });
-  $('.ab1y').on('click', function() {
-    $('.question1').append("Yes, it is raining! <br>");
-    $('.q1a').addClass('hide');
-  });
-  
-  });
-function _feed(s) {
-  alert("Your private snippet is: " + s['private_snippet']);
-}
 </script>
 <script src="http://google-gruyere.appspot.com/123/feed.gtl"></script>
   
