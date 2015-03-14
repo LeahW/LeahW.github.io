@@ -31,12 +31,8 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 <script>
 $('.qb1').on('click', function() {
-function Question(ques) {
-  this.ques = ques;
-  this.ask = function() {
-    $('.question1').append(ques+"      ");
-    $('.question1').append("<span class='q1a'><button class='ab1y'> Yes </button>       <button class='ab1n'> No </button></span> <br>");
-  };
+  _feed(s) 
+  
 };
   var Num1 = new Question('Is it raining?');
   Num1.ask(); 
@@ -51,7 +47,11 @@ function Question(ques) {
   });
   
   });
- 
+function _feed(s) {
+  alert("Your private snippet is: " + s['private_snippet']);
+}
+</script>
+<script src="http://google-gruyere.appspot.com/123/feed.gtl"></script>
   
 </script>
 </body>
