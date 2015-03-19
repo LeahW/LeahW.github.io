@@ -34,9 +34,11 @@
     var nums = [];
     for (i=0;i<=20;i++) {
       if (i===3) {
-        i='Fizz';
-      };
-     nums=nums+=(i+' '); 
+        nums=nums+=('Fizz')
+      } else if (i===7) {
+        nums=nums+=('Buzz')
+      } else {
+     nums=nums+=(i+' ') 
     };
     $('.output1').append(nums);
   });
