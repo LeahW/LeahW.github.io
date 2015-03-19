@@ -31,7 +31,11 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
   <script>
   $('.qb1').on('click', function() {
-    $('.output1').append("Success!");
+    var nums = new Array[];
+    for (i=0;i<=20;i++) {
+     nums.append(i); 
+    }
+    $('.output1').append(nums);
   });
 </script>
 
