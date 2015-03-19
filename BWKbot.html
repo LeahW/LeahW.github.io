@@ -16,7 +16,7 @@
 <p class="lead"> Welcome! </p>
 </div>
 <div class="container well col-md-8 col-md-offset-2">
-<button class='qb'>Play!</button>
+<button class='qb1'>Play!</button>
 <br>
 
 <div class="container well col-md-8 col-md-offset-2">
@@ -30,10 +30,27 @@
 <script src="https://code.jquery.com/jquery-1.11.2.min.js">
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js">
   <script>
-$('.qb').on('click', function() {
-  var msg = prompt("Enter a message!");
-  $('.output1').append(msg);
-});
+$('.qb1').on('click', function() {
+function Question(ques) {
+  this.ques = ques;
+  this.ask = function() {
+    $('.output1').append(ques+"      ");
+    $('.output1').append("<span class='q1a'><button class='ab1y'> Yes </button>       <button class='ab1n'> No </button></span> <br>");
+  };
+};
+  var Num1 = new Question('Is it raining?');
+  Num1.ask(); 
+  
+   $('.ab1n').on('click', function() {
+    $('.output1').append("Nope, it's not raining! <br>");
+    $('.q1a').addClass('hide');
+  });
+  $('.ab1y').on('click', function() {
+    $('.output1').append("Yes, it is raining! <br>");
+    $('.q1a').addClass('hide');
+  });
+  
+  });
 </script>
 
 </body>
