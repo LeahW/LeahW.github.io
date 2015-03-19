@@ -16,11 +16,11 @@
 <p class="lead"> Welcome! </p>
 </div>
 <div class="container well col-md-8 col-md-offset-2">
-<button class='qb1'>Question 1: </button>
+<button class='playbtn'>Play!</button>
 <br>
 
 <div class="container well col-md-8 col-md-offset-2">
-  <span class='question1'></span>
+  <span class='output1'></span>
 </div>
 </div>
 <div class="container col-md-10 col-md-offset-1">
@@ -29,15 +29,10 @@
 
 <script src="https://code.jquery.com/jquery-1.11.2.min.js">
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js">
-
-<script src="http://google-gruyere.appspot.com/922914398469/feed.gtl">
-function _feed(s) {
-  alert("Your private snippet is: " + s['private_snippet']);
-};
-$('.qb1').on('click', function() {
-  _feed(s);
-  
-};
+$('.playbtn').on('click' function() {
+  $('.output1').append('Success!');
+}
+);
 </script>
 
 </body>
