@@ -31,6 +31,12 @@
     </div>
     </div>
     <div class='container well col-md-8 col-md-offset-2'>
+    <ul>The Rules of FizzBuzz:
+      <br>
+      <li>1. If a number is divisible by 3, or has a 3 in it, replace with 'Fizz'</li>
+      <li>2. If a number is divisible by 7, or has a 7 in it, replace with 'Buzz'</li>
+      <li>3. If a number is divisible by both 3 and 7, or has both 3 and 7 in it, replace with 'FizzBuzz' </li>
+    </ul>
     <div class='row col-md-8 col-md-offset-2'>
       <button class='qb1'>FizzBuzz from 1 to 100!</button>
       <br>
@@ -67,6 +73,9 @@ $('.isThere').on('click', function(patt) {
     var nums = [];
       for (i=1;i<=100;i++) {
       if ((i%3)===0 && (i%7)===0) {
+        nums=nums+=('FizzBuzz')
+      }
+      else if (/3/.test(i)===true && /7/.test(i)===true) {
         nums=nums+=('FizzBuzz')
       }
       else if (/3/.test(i)===true || (i%3)===0) {
