@@ -29,6 +29,8 @@
     <button class='isThere'> Which vowels have you used? </button>
     <span class='response2'></span>
     </div>
+    </div>
+    <div class='container well col-md-8 col-md-offset-2'>
     <div class='row col-md-8 col-md-offset-2'>
       <button class='qb1'>FizzBuzz from 1 to 100!</button>
       <br>
@@ -63,7 +65,7 @@ $('.isThere').on('click', function(patt) {
 });
  $('.qb1').on('click', function() {
     var nums = [];
-      for (i=1;i<=30;i++) {
+      for (i=1;i<=100;i++) {
       if ((i%3)===0 && (i%7)===0) {
         nums=nums+=('FizzBuzz')
       }
