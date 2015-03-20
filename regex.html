@@ -29,6 +29,11 @@
     <button class='isThere'> Which vowels have you used? </button>
     <span class='response2'></span>
     </div>
+    <div class='row col-md-8 col-md-offset-2'>
+      <button class='qb1'>FizzBuzz from 1 to 100!</button>
+      <br>
+      <span class='output1'></span>
+    </div>
     </div>
 
 <div class='container col-md-8 col-md-offset-2'>
@@ -56,5 +61,22 @@ $('.isThere').on('click', function(patt) {
     var response5 = /u/.exec(text3);
   $('.response2').append(response1, response2, response3, response4, response5);
 });
+ $('.qb1').on('click', function() {
+    var nums = [];
+      for (i=1;i<=30;i++) {
+      if ((i%3)===0 && (i%7)===0) {
+        nums=nums+=('FizzBuzz')
+      }
+      else if (/3/.test(i)===true || (i%3)===0) {
+        nums=nums+=('Fizz')
+      } else if (/7/.test(i)===true || (i%7)===0) {
+        nums=nums+=('Buzz')
+      } else if (i!==3 && i!==7) {
+        nums=nums+=i
+      };
+     nums=nums+=(' ') 
+    };
+    $('.output1').append(nums);
+  });
 </script>
 </body>
