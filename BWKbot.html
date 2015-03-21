@@ -75,9 +75,7 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
   <script>
   function makeClass(block) {
-    suffix = "\'";
-    block = block + suffix;
-    prefix = "\'.";
+    prefix = ".";
     prefix = prefix + block;
     return prefix;
   };
@@ -85,7 +83,7 @@
     var chosenBlock = prompt("Please enter an alphanumeric block coordinate:");
     var chosenClass = makeClass(chosenBlock); 
         $('.output1').append(chosenClass);
-        $(chosenClass).addClass('.alive');
+        $('chosenClass').addClass('.alive');
   });
    
 </script>
