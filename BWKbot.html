@@ -77,14 +77,15 @@
   
   
   $('.qb1').on('click', function() {
-    function choose(ques) {
+    function Choose(ques) {
       this.ques = ques;
-      this.ask = function(ques) {
+      this.ask = function() {
         $('.output1').append(ques + "      ");
         $('.output1').append("<span class='rowSpan'><button class='rowBtn'> A </button></span>");
       };
     };
-      choose("Pick a row!");
+    var rowQuestion = new Choose("Pick a row!");
+    rowQuestion.ask();
   });
    
 </script>
