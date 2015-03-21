@@ -74,10 +74,13 @@
 <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
   <script>
+  function makeClass(block) {
+      return block.split("").splice(0, "'.").splice(4, "'");
+  };
   $('.qb1').on('click', function() {
     var chosenBlock = prompt("Please enter an alphanumeric block coordinate:");
-    var chosenClass = chosenBlock().split("").splice(0, "'.").splice(4, "'");
-    $('.output1').append(chosenClass);
+    var newClass = makeClass(chosenBlock)
+    $('.output1').append(newClass);
   });
    
 </script>
