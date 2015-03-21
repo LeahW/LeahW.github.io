@@ -17,6 +17,13 @@
   background: #004200;
   color: #EDEDA3;
 }
+.alive {
+  background: #66FF33;
+  color: #000000;
+}
+.dead {
+  background: #A32900;
+}
 </style>
 </head>
 <body>
@@ -68,22 +75,11 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
   <script>
   $('.qb1').on('click', function() {
-    var nums = [];
-      for (i=1;i<=30;i++) {
-      if ((i%3)===0 && (i%7)===0) {
-        nums=nums+=('FizzBuzz')
-      }
-      else if (/3/.test(i)===true || (i%3)===0) {
-        nums=nums+=('Fizz')
-      } else if (/7/.test(i)===true || (i%7)===0) {
-        nums=nums+=('Buzz')
-      } else if (i!==3 && i!==7) {
-        nums=nums+=i
-      };
-     nums=nums+=(' ') 
-    };
-    $('.output1').append(nums);
+    var chosenBlock = prompt("Please enter an alphanumeric block coordinate:");
+    var chosenClass = chosenBlock().split("").splice(0, "'.").splice(4, "'");
+    $('.output1').append(chosenClass);
   });
+   
 </script>
 
 </body>
