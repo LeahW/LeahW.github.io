@@ -75,13 +75,12 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
   <script>
   function makeClass(block) {
-      return block.split("").splice(0, "'.").splice(4, "'");
+      return block.split("");
   };
   $('.qb1').on('click', function() {
     var chosenBlock = prompt("Please enter an alphanumeric block coordinate:");
-    var newClass = makeClass(chosenBlock);
     $('.output1').append("Test");
-    $('.output1').append(newClass);
+    $('.output1').append(makeClass(chosenBlock));
   });
    
 </script>
