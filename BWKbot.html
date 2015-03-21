@@ -74,16 +74,17 @@
 <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
   <script>
-  function makeClass(block) {
-    prefix = ".";
-    prefix = prefix + block;
-    return prefix;
-  };
+  
+  
   $('.qb1').on('click', function() {
-    var chosenBlock = prompt("Please enter an alphanumeric block coordinate:");
-    var chosenClass = makeClass(chosenBlock); 
-        $('.output1').append(chosenClass);
-        $('chosenClass').addClass('.alive');
+    function choose(ques) {
+      this.ques = ques;
+      this.ask = function(ques) {
+        $('.output1').append(ques + "      ");
+        $('.output1').append("<span class="rowSpan"><button class="rowBtn"> A </button></span>");
+      };
+    };
+      choose("Pick a row!");
   });
    
 </script>
