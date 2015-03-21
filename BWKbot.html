@@ -79,7 +79,8 @@
   };
   $('.qb1').on('click', function() {
     var chosenBlock = prompt("Please enter an alphanumeric block coordinate:");
-    var newClass = makeClass(chosenBlock)
+    var newClass = makeClass(chosenBlock);
+    $('.output1').append("Test");
     $('.output1').append(newClass);
   });
    
