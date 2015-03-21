@@ -81,10 +81,12 @@
       this.ques = ques;
       this.ask = function() {
         $('.output1').append(ques + "      ");
-        $('.output1').append("<span class='rowSpan'><button class='rowBtn'> A </button></span>");
+        $('.output1').append("<span class='rowSpan'>
+        <button class='rowBtnA'> A </button>  <button class="rowBtnB"> B </button>
+        </span>");
       };
     };
-    var rowQuestion = new Choose("Pick a row!");
+    var rowQuestion = new Choose("Pick a row:");
     rowQuestion.ask();
   });
    
