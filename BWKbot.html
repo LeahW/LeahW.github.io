@@ -93,6 +93,8 @@
     
     $('.rowBtnA').on('click', function () {
       $('.rowSpan').addClass('hide');
+      var columnQuestion = new Choose("Pick a column:");
+      $('.output1').append(columnQuestion.ask());
       });
       
     $('.rowBtnB').on('click', function () {
