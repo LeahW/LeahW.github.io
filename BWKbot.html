@@ -90,10 +90,7 @@
 };
     var rowQuestion = new Choose("Pick a row:");
     rowQuestion.ask();
-    
-    $('.rowBtnA').on('click', function () {
-      $('.rowSpan').addClass('hide');
-      function Select(ques1) {
+    function Select(ques1) {
         this.ques1 = ques1;
         this.ask = function() {
           $('.output1').append("<span class='colSpan'>" + ques1 + "</span>      ");
@@ -101,6 +98,9 @@
  ;       
             };
         };
+    $('.rowBtnA').on('click', function () {
+      $('.rowSpan').addClass('hide');
+      
         var colQuestion = new Select("Pick a column:");
         colQuestion.ask();
       });
