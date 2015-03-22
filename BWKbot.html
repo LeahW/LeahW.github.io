@@ -86,7 +86,7 @@
 </div>
 <div class="row container col-md-6"></div>
 <div class="row container col-md-2">
-  <button class='qb2'>Calulate</button>
+  <button class='qb2'>Calculate</button>
 </div>
 <div class="row container col-md-12">
 <br>
@@ -102,7 +102,15 @@
 <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
   <script>
-  
+ var countA = 0;
+ var countB = 0;
+ var countC = 0;
+ 
+ $('.qb2').on('click', function() {
+   $('.countA').append(countA);
+   $('.countB').append(countB);
+   $('.countC').append(countC);
+ });
   
   $('.qb1').on('click', function() {
     function Choose(ques) {
