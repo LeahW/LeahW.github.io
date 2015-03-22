@@ -98,6 +98,7 @@
  ;       
             };
         };
+        
     $('.rowBtnA').on('click', function () {
       $('.rowSpan').addClass('hide');
         var colQuestion = new Select("Pick a column:");
@@ -132,12 +133,60 @@
       $('.rowSpan').addClass('hide');
       var colQuestion = new Select("Pick a column:");
         colQuestion.ask();
+        $('.colBtn1').on('click', function() {
+          $('.colSpan').addClass('hide');
+          $('.B1').toggleClass('alive');
+        });
+        $('.colBtn2').on('click', function() {
+          $('.colSpan').addClass('hide');
+          $('.B2').toggleClass('alive');
+        });
+        $('.colBtn3').on('click', function() {
+          $('.colSpan').addClass('hide');
+          $('.B3').toggleClass('alive');
+        });
+        $('.colBtn4').on('click', function() {
+          $('.colSpan').addClass('hide');
+          $('.B4').toggleClass('alive');
+        });
+        $('.colBtn5').on('click', function() {
+          $('.colSpan').addClass('hide');
+          $('.B5').toggleClass('alive');
+        });
+        $('.colBtn6').on('click', function() {
+          $('.colSpan').addClass('hide');
+          $('.B6').toggleClass('alive');
+        });
       });
       
     $('.rowBtnC').on('click', function () {
       $('.rowSpan').addClass('hide');
       var colQuestion = new Select("Pick a column:");
         colQuestion.ask();
+        $('.colBtn1').on('click', function() {
+          $('.colSpan').addClass('hide');
+          $('.C1').toggleClass('alive');
+        });
+        $('.colBtn2').on('click', function() {
+          $('.colSpan').addClass('hide');
+          $('.C2').toggleClass('alive');
+        });
+        $('.colBtn3').on('click', function() {
+          $('.colSpan').addClass('hide');
+          $('.C3').toggleClass('alive');
+        });
+        $('.colBtn4').on('click', function() {
+          $('.colSpan').addClass('hide');
+          $('.C4').toggleClass('alive');
+        });
+        $('.colBtn5').on('click', function() {
+          $('.colSpan').addClass('hide');
+          $('.C5').toggleClass('alive');
+        });
+        $('.colBtn6').on('click', function() {
+          $('.colSpan').addClass('hide');
+          $('.C6').toggleClass('alive');
+        });
       });
   });
    
