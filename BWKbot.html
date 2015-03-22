@@ -102,6 +102,10 @@
       $('.rowSpan').addClass('hide');
         var colQuestion = new Select("Pick a column:");
         colQuestion.ask();
+        $('.colBtn1').on('click', function() {
+          $('.A1').addClass('alive');
+          $('.colSpan').addClass('hide');
+        });
       });
       
     $('.rowBtnB').on('click', function () {
