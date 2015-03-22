@@ -103,8 +103,8 @@
         var colQuestion = new Select("Pick a column:");
         colQuestion.ask();
         $('.colBtn1').on('click', function() {
-          $('.A1').addClass('alive');
           $('.colSpan').addClass('hide');
+          $('.A1').toggleClass('alive');
         });
       });
       
