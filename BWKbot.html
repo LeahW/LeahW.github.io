@@ -34,8 +34,8 @@
 <div class="container well col-md-10 col-md-offset-1">
 <p class="lead"> Welcome! </p>
 </div>
-<div class="container well col-md-8 col-md-offset-2">
-<div class="container col-md-6 col-md-offset-3 board">
+<div class="container well col-md-9 col-md-offset-1">
+<div class="container col-md-8 col-md-offset-2 board">
 
 <div class="container col-md-2 block A1">A1</div>
 <div class="container col-md-2 block A2">A2</div>
@@ -43,6 +43,8 @@
 <div class="container col-md-2 block A4">A4</div>
 <div class="container col-md-2 block A5">A5</div>
 <div class="container col-md-2 block A6">A6</div>
+<div class="container col-md-2 block A7">A7</div>
+<div class="container col-md-2 block A8">A8</div>
 
 <div class="container col-md-2 block B1">B1</div>
 <div class="container col-md-2 block B2">B2</div>
@@ -50,6 +52,8 @@
 <div class="container col-md-2 block B4">B4</div>
 <div class="container col-md-2 block B5">B5</div>
 <div class="container col-md-2 block B6">B6</div>
+<div class="container col-md-2 block B7">B7</div>
+<div class="container col-md-2 block B8">B8</div>
 
 <div class="container col-md-2 block C1">C1</div>
 <div class="container col-md-2 block C2">C2</div>
@@ -57,6 +61,8 @@
 <div class="container col-md-2 block C4">C4</div>
 <div class="container col-md-2 block C5">C5</div>
 <div class="container col-md-2 block C6">C6</div>
+<div class="container col-md-2 block C7">C7</div>
+<div class="container col-md-2 block C8">C8</div>
 
   The Board.
 </div>
@@ -94,7 +100,7 @@
         this.ques1 = ques1;
         this.ask = function() {
           $('.output1').append("<span class='colSpan'>" + ques1 + "</span>      ");
-          $('.output1').append("<span class='colSpan'><button class='colBtn1'> 1 </button>  <button class='colBtn2'> 2 </button>   <button class='colBtn3'> 3 </button>   <button class='colBtn4'> 4 </button>   <button class='colBtn5'> 5 </button>   <button class='colBtn6'> 6 </button></span>")
+          $('.output1').append("<span class='colSpan'><button class='colBtn1'> 1 </button>  <button class='colBtn2'> 2 </button>   <button class='colBtn3'> 3 </button>   <button class='colBtn4'> 4 </button>   <button class='colBtn5'> 5 </button>   <button class='colBtn6'> 6 </button>   <button class='colBtn7'> 7 </button>   <button class='colBtn8'> 8 </button></span>")
  ;       
             };
         };
@@ -127,6 +133,13 @@
           $('.colSpan').addClass('hide');
           $('.A6').toggleClass('alive');
         });
+        $('.colBtn7').on('click', function() {
+          $('.colSpan').addClass('hide');
+          $('.A7').toggleClass('alive');
+      });
+      $('.colBtn8').on('click', function() {
+          $('.colSpan').addClass('hide');
+          $('.A8').toggleClass('alive');
       });
       
     $('.rowBtnB').on('click', function () {
@@ -157,6 +170,13 @@
           $('.colSpan').addClass('hide');
           $('.B6').toggleClass('alive');
         });
+        $('.colBtn7').on('click', function() {
+          $('.colSpan').addClass('hide');
+          $('.B7').toggleClass('alive');
+      });
+      $('.colBtn8').on('click', function() {
+          $('.colSpan').addClass('hide');
+          $('.B8').toggleClass('alive');
       });
       
     $('.rowBtnC').on('click', function () {
@@ -187,6 +207,14 @@
           $('.colSpan').addClass('hide');
           $('.C6').toggleClass('alive');
         });
+        $('.colBtn7').on('click', function() {
+          $('.colSpan').addClass('hide');
+          $('.C7').toggleClass('alive');
+      });
+      $('.colBtn8').on('click', function() {
+          $('.colSpan').addClass('hide');
+          $('.C8').toggleClass('alive');
+      });
       });
   });
    
