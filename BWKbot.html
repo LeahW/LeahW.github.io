@@ -38,7 +38,7 @@
 <div class="container col-md-8 col-md-offset-2 board">
 <div class="row container col-md-12">
 <br>
-<div class="row container col-md-1 block"> A </div>
+<div class="row container col-md-1 block"> 1 </div>
 <div class="row container col-md-1 block">  </div>
 <div class="container col-md-1 block A1"> - </div>
 <div class="container col-md-1 block A2"> - </div>
@@ -57,6 +57,9 @@
 </div>
 
 <div class="row col-md-12">
+<br>
+<div class="row container col-md-1 block"> 2 </div>
+<div class="row container col-md-1 block">  </div>
 <div class="container col-md-1 block B1"> - </div>
 <div class="container col-md-1 block B2"> - </div>
 <div class="container col-md-1 block B3"> - </div>
@@ -74,6 +77,9 @@
 </div>
 
 <div class="row col-md-12">
+<br>
+<div class="row container col-md-1 block"> 3 </div>
+<div class="row container col-md-1 block">  </div>
 <div class="container col-md-1 block C1">C1</div>
 <div class="container col-md-1 block C2">C2</div>
 <div class="container col-md-1 block C3">C3</div>
@@ -128,7 +134,7 @@
       this.ques = ques;
       this.ask = function() {
         $('.output1').append("<span class='rowSpan'>" + ques + "</span>      ");
-        $('.output1').append("<span class='rowSpan'><button class='rowBtnA'> A </button>  <button class='rowBtnB'> B </button>  <button class='rowBtnC'> C </button></span>");
+        $('.output1').append("<span class='rowSpan'><button class='rowBtnA'> 1 </button>  <button class='rowBtnB'> 2 </button>  <button class='rowBtnC'> 3 </button></span>");
         };
 };
     var rowQuestion = new Choose("Pick a row:");
