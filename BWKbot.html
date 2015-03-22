@@ -40,14 +40,14 @@
 <br>
 <div class="row container col-md-1 block"> 1 </div>
 <div class="row container col-md-1 block">  </div>
-<div class="container col-md-1 block A1"> - </div>
+<div class="container col-md-1 block A8" id="A8" onclick="funcA8()"> - </div>
 <div class="container col-md-1 block A2"> - </div>
 <div class="container col-md-1 block A3"> - </div>
 <div class="container col-md-1 block A4"> - </div>
 <div class="container col-md-1 block A5"> - </div>
 <div class="container col-md-1 block A6"> - </div>
 <div class="container col-md-1 block A7"> - </div>
-<div class="container col-md-1 block A8"> - </div>
+<div class="container col-md-1 block A1"> - </div>
 <div class="row container col-md-2 block"></div>
 <div class="row container col-md-2 block"> Count: <span class="countA"></span> </div>
 </div>
@@ -151,7 +151,7 @@
             };
         };
         
-    $('.rowBtnA').on('click', function () {
+      $('.rowBtnA').on('click', function () {
       $('.rowSpan').addClass('hide');
         var colQuestion = new Select("Pick a column:");
         colQuestion.ask();
@@ -289,6 +289,10 @@
       });
       });
   });
+  function A8() {
+    $('.A8').addClass('alive');
+    countA=countA+128;
+  };
    
 </script>
 
