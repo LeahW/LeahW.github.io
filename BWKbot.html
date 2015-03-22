@@ -24,6 +24,10 @@
 .dead {
   background: #A32900;
 }
+.hide {
+  height: 1px;
+  width: 1px;
+}
 </style>
 </head>
 <body>
@@ -86,6 +90,18 @@
 };
     var rowQuestion = new Choose("Pick a row:");
     rowQuestion.ask();
+    
+    $('.rowBtnA').on('click', function () {
+      $('.rowSpan').addClass('.hide');
+      });
+      
+    $('.rowBtnB').on('click', function () {
+      $('.rowSpan').addClass('.hide');
+      });
+      
+    $('.rowBtnC').on('click', function () {
+      $('.rowSpan').addClass('.hide');
+      });
   });
    
 </script>
