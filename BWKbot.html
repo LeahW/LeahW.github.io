@@ -55,14 +55,14 @@
 </div>
 
 <div class="row col-md-12">
-<div class="container col-md-1 block B1">B1</div>
-<div class="container col-md-1 block B2">B2</div>
-<div class="container col-md-1 block B3">B3</div>
-<div class="container col-md-1 block B4">B4</div>
-<div class="container col-md-1 block B5">B5</div>
-<div class="container col-md-1 block B6">B6</div>
-<div class="container col-md-1 block B7">B7</div>
-<div class="container col-md-1 block B8">B8</div>
+<div class="container col-md-1 block B1">  </div>
+<div class="container col-md-1 block B2">  </div>
+<div class="container col-md-1 block B3">  </div>
+<div class="container col-md-1 block B4">  </div>
+<div class="container col-md-1 block B5">  </div>
+<div class="container col-md-1 block B6">  </div>
+<div class="container col-md-1 block B7">  </div>
+<div class="container col-md-1 block B8">  </div>
 <div class="row container col-md-2 block"></div>
 <div class="row container col-md-2 block"> Count: <span class="countB"></span> </div>
 </div>
@@ -193,34 +193,42 @@
         $('.colBtn1').on('click', function() {
           $('.colSpan').addClass('hide');
           $('.B1').toggleClass('alive');
+          countB=countB+128;
         });
         $('.colBtn2').on('click', function() {
           $('.colSpan').addClass('hide');
           $('.B2').toggleClass('alive');
+          countB=countB+64;
         });
         $('.colBtn3').on('click', function() {
           $('.colSpan').addClass('hide');
           $('.B3').toggleClass('alive');
+          countB=countB+32;
         });
         $('.colBtn4').on('click', function() {
           $('.colSpan').addClass('hide');
           $('.B4').toggleClass('alive');
+          countB=countB+16;
         });
         $('.colBtn5').on('click', function() {
           $('.colSpan').addClass('hide');
           $('.B5').toggleClass('alive');
+          countB=countB+8;
         });
         $('.colBtn6').on('click', function() {
           $('.colSpan').addClass('hide');
           $('.B6').toggleClass('alive');
+          countB=countB+4;
         });
         $('.colBtn7').on('click', function() {
           $('.colSpan').addClass('hide');
           $('.B7').toggleClass('alive');
+          countB=countB+2;
       });
       $('.colBtn8').on('click', function() {
           $('.colSpan').addClass('hide');
           $('.B8').toggleClass('alive');
+          countB=countB+1;
       });
     });
       
@@ -231,34 +239,42 @@
         $('.colBtn1').on('click', function() {
           $('.colSpan').addClass('hide');
           $('.C1').toggleClass('alive');
+          countC=countC+128;
         });
         $('.colBtn2').on('click', function() {
           $('.colSpan').addClass('hide');
           $('.C2').toggleClass('alive');
+          countC=countC+64;
         });
         $('.colBtn3').on('click', function() {
           $('.colSpan').addClass('hide');
           $('.C3').toggleClass('alive');
+          countC=countC+32;
         });
         $('.colBtn4').on('click', function() {
           $('.colSpan').addClass('hide');
           $('.C4').toggleClass('alive');
+          countC=countC+16;
         });
         $('.colBtn5').on('click', function() {
           $('.colSpan').addClass('hide');
           $('.C5').toggleClass('alive');
+          countC=countC+8;
         });
         $('.colBtn6').on('click', function() {
           $('.colSpan').addClass('hide');
           $('.C6').toggleClass('alive');
+          countC=countC+4;
         });
         $('.colBtn7').on('click', function() {
           $('.colSpan').addClass('hide');
           $('.C7').toggleClass('alive');
+          countC=countC+2;
       });
       $('.colBtn8').on('click', function() {
           $('.colSpan').addClass('hide');
           $('.C8').toggleClass('alive');
+          countC=countC+1;
       });
       });
   });
