@@ -242,10 +242,13 @@
  });
  
  // UTF-8 lookup
- var utf8 = ["NUL", "SOH", "STX", "ETX"];
+ var utf8 = ["NUL", "SOH", "STX", "ETX", "EOT", "ENQ", "ACK", "BEL", "BS", "HT", "LF", "VT", "FF", "CR", "SO", "SI", "DLE",
+  "DC1", "DC2", "DC3", "DC4", "NAK", "SYN", "ETB", "CAN", "EM", "SUB", "ESC", "FS", "GS", "RS", "US", "SP", "!"];
  
  $('.qb1').on('click', function() {
    $('.block1').append(utf8[countA]);
+   $('.block2').append(utf8[countB]);
+   $('.block3').append(utf8[countC]);
    $('.qb1').addClass('hide');
  });
  
