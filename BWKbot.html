@@ -19,15 +19,15 @@
 }
 .block1 {
   color: #FFADFF;
-  font-size: 200%;
+  font-size: 150%;
 }
 .block2 {
   color: #FFADFF;
-  font-size: 200%;
+  font-size: 150%;
 }
 .block3 {
   color: #FFADFF;
-  font-size: 200%;
+  font-size: 150%;
 }
 .alive {
   background: #66FF33;
@@ -47,8 +47,7 @@
 <div class="container col-md-8 col-md-offset-2 board">
 <div class="row container col-md-12">
 <br>
-<div class="row container col-md-1 block1">   </div>
-<div class="row container col-md-1 block">  </div>
+<div class="row container col-md-2 block1">   </div>
 <div class="container col-md-1 block A8"> - </div>
 <div class="container col-md-1 block A7"> - </div>
 <div class="container col-md-1 block A6"> - </div>
@@ -67,8 +66,7 @@
 
 <div class="row col-md-12">
 <br>
-<div class="row container col-md-1 block2">   </div>
-<div class="row container col-md-1 block">  </div>
+<div class="row container col-md-2 block2">   </div>
 <div class="container col-md-1 block B8"> - </div>
 <div class="container col-md-1 block B7"> - </div>
 <div class="container col-md-1 block B6"> - </div>
@@ -87,8 +85,7 @@
 
 <div class="row col-md-12">
 <br>
-<div class="row container col-md-1 block3">   </div>
-<div class="row container col-md-1 block">  </div>
+<div class="row container col-md-2 block3">   </div>
 <div class="container col-md-1 block C8"> - </div>
 <div class="container col-md-1 block C7"> - </div>
 <div class="container col-md-1 block C6"> - </div>
@@ -247,7 +244,8 @@
  // UTF-8 lookup
  var utf8 = ["NUL", "SOH", "STX", "ETX", "EOT", "ENQ", "ACK", "BEL", "BS", "HT", "LF", "VT", "FF", "CR", "SO", "SI", "DLE",
   "DC1", "DC2", "DC3", "DC4", "NAK", "SYN", "ETB", "CAN", "EM", "SUB", "ESC", "FS", "GS", "RS", "US", "SP", "!", "\"", "#", "$",
-   "%", "&", "\'", "(", ")", "*", "+", ",", "-", ".", "&#92"];
+   "%", "&", "\'", "(", ")", "*", "+", ",", "-", ".", "%x2F", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", ":", ";", "<",
+    "=", ">", "?"];
  
  $('.qb1').on('click', function() {
    $('.block1').append(utf8[countA]);
