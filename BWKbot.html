@@ -21,9 +21,6 @@
   background: #66FF33;
   color: #000000;
 }
-.dead {
-  background: #A32900;
-}
 .hide {
   height: 1px;
   width: 1px;
@@ -41,12 +38,12 @@
 <div class="row container col-md-1 block"> 1 </div>
 <div class="row container col-md-1 block">  </div>
 <div class="container col-md-1 block A8"> - </div>
-<div class="container col-md-1 block A2"> - </div>
-<div class="container col-md-1 block A3"> - </div>
-<div class="container col-md-1 block A4"> - </div>
-<div class="container col-md-1 block A5"> - </div>
-<div class="container col-md-1 block A6"> - </div>
 <div class="container col-md-1 block A7"> - </div>
+<div class="container col-md-1 block A6"> - </div>
+<div class="container col-md-1 block A5"> - </div>
+<div class="container col-md-1 block A4"> - </div>
+<div class="container col-md-1 block A3"> - </div>
+<div class="container col-md-1 block A2"> - </div>
 <div class="container col-md-1 block A1"> - </div>
 <div class="row container col-md-2 block"></div>
 <div class="row container col-md-2 block"> Count: <span class="countA"></span> </div>
@@ -60,14 +57,14 @@
 <br>
 <div class="row container col-md-1 block"> 2 </div>
 <div class="row container col-md-1 block">  </div>
-<div class="container col-md-1 block B1"> - </div>
-<div class="container col-md-1 block B2"> - </div>
-<div class="container col-md-1 block B3"> - </div>
-<div class="container col-md-1 block B4"> - </div>
-<div class="container col-md-1 block B5"> - </div>
-<div class="container col-md-1 block B6"> - </div>
-<div class="container col-md-1 block B7"> - </div>
 <div class="container col-md-1 block B8"> - </div>
+<div class="container col-md-1 block B7"> - </div>
+<div class="container col-md-1 block B6"> - </div>
+<div class="container col-md-1 block B5"> - </div>
+<div class="container col-md-1 block B4"> - </div>
+<div class="container col-md-1 block B3"> - </div>
+<div class="container col-md-1 block B2"> - </div>
+<div class="container col-md-1 block B1"> - </div>
 <div class="row container col-md-2 block"></div>
 <div class="row container col-md-2 block"> Count: <span class="countB"></span> </div>
 </div>
@@ -80,14 +77,14 @@
 <br>
 <div class="row container col-md-1 block"> 3 </div>
 <div class="row container col-md-1 block">  </div>
-<div class="container col-md-1 block C1"> - </div>
-<div class="container col-md-1 block C2"> - </div>
-<div class="container col-md-1 block C3"> - </div>
-<div class="container col-md-1 block C4"> - </div>
-<div class="container col-md-1 block C5"> - </div>
-<div class="container col-md-1 block C6"> - </div>
-<div class="container col-md-1 block C7"> - </div>
 <div class="container col-md-1 block C8"> - </div>
+<div class="container col-md-1 block C7"> - </div>
+<div class="container col-md-1 block C6"> - </div>
+<div class="container col-md-1 block C5"> - </div>
+<div class="container col-md-1 block C4"> - </div>
+<div class="container col-md-1 block C3"> - </div>
+<div class="container col-md-1 block C2"> - </div>
+<div class="container col-md-1 block C1"> - </div>
 <div class="row container col-md-2 block"></div>
 <div class="row container col-md-2 block"> Count: <span class="countC"></span> </div>
 </div>
@@ -99,7 +96,7 @@
 <br>
 </div>
 <div class="row container col-md-4">
-<button class='qb1'>Set Bits</button>
+<button class='qb1'>*</button>
 </div>
 <div class="row container col-md-6"></div>
 <div class="row container col-md-2">
@@ -120,179 +117,56 @@
 <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
   <script>
+  // counters to hold value of each octet row
  var countA = 0;
  var countB = 0;
  var countC = 0;
  
- $('.qb2').on('click', function() {
+ // show value of each counter
+  $('.qb2').on('click', function() {
    $('.countA').append(countA);
    $('.countB').append(countB);
    $('.countC').append(countC);
    $('.qb2').addClass('hide');
    $('.qb3').removeClass('hide');
  });
-  
-  $('.qb1').on('click', function() {
-    function Choose(ques) {
-      this.ques = ques;
-      this.ask = function() {
-        $('.output1').append("<span class='rowSpan'>" + ques + "</span>      ");
-        $('.output1').append("<span class='rowSpan'><button class='rowBtnA'> 1 </button>  <button class='rowBtnB'> 2 </button>  <button class='rowBtnC'> 3 </button></span>");
-        };
-};
-    var rowQuestion = new Choose("Pick a row:");
-    rowQuestion.ask();
-    function Select(ques1) {
-        this.ques1 = ques1;
-        this.ask = function() {
-          $('.output1').append("<span class='colSpan'>" + ques1 + "</span>      ");
-          $('.output1').append("<span class='colSpan'><button class='colBtn1'> 1 </button>  <button class='colBtn2'> 2 </button>   <button class='colBtn3'> 3 </button>   <button class='colBtn4'> 4 </button>   <button class='colBtn5'> 5 </button>   <button class='colBtn6'> 6 </button>   <button class='colBtn7'> 7 </button>   <button class='colBtn8'> 8 </button></span>")
- ;       
-            };
-        };
-        
-      $('.rowBtnA').on('click', function () {
-      $('.rowSpan').addClass('hide');
-        var colQuestion = new Select("Pick a column:");
-        colQuestion.ask();
-        $('.colBtn1').on('click', function() {
-          $('.colSpan').addClass('hide');
-          $('.A1').addClass('alive');
-          countA=countA+128;
-        });
-        $('.colBtn2').on('click', function() {
-          $('.colSpan').addClass('hide');
-          $('.A2').addClass('alive');
-          countA=countA+64;
-        });
-        $('.colBtn3').on('click', function() {
-          $('.colSpan').addClass('hide');
-          $('.A3').addClass('alive');
-          countA=countA+32;
-        });
-        $('.colBtn4').on('click', function() {
-          $('.colSpan').addClass('hide');
-          $('.A4').addClass('alive');
-          countA=countA+16;
-        });
-        $('.colBtn5').on('click', function() {
-          $('.colSpan').addClass('hide');
-          $('.A5').addClass('alive');
-          countA=countA+8;
-        });
-        $('.colBtn6').on('click', function() {
-          $('.colSpan').addClass('hide');
-          $('.A6').addClass('alive');
-          countA=countA+4;
-        });
-        $('.colBtn7').on('click', function() {
-          $('.colSpan').addClass('hide');
-          $('.A7').addClass('alive');
-          countA=countA+2;
-      });
-      $('.colBtn8').on('click', function() {
-          $('.colSpan').addClass('hide');
-          $('.A8').addClass('alive');
-          countA=countA+1;
-      });
-    });
-      
-    $('.rowBtnB').on('click', function () {
-      $('.rowSpan').addClass('hide');
-      var colQuestion = new Select("Pick a column:");
-        colQuestion.ask();
-        $('.colBtn1').on('click', function() {
-          $('.colSpan').addClass('hide');
-          $('.B1').addClass('alive');
-          countB=countB+128;
-        });
-        $('.colBtn2').on('click', function() {
-          $('.colSpan').addClass('hide');
-          $('.B2').addClass('alive');
-          countB=countB+64;
-        });
-        $('.colBtn3').on('click', function() {
-          $('.colSpan').addClass('hide');
-          $('.B3').addClass('alive');
-          countB=countB+32;
-        });
-        $('.colBtn4').on('click', function() {
-          $('.colSpan').addClass('hide');
-          $('.B4').addClass('alive');
-          countB=countB+16;
-        });
-        $('.colBtn5').on('click', function() {
-          $('.colSpan').addClass('hide');
-          $('.B5').addClass('alive');
-          countB=countB+8;
-        });
-        $('.colBtn6').on('click', function() {
-          $('.colSpan').addClass('hide');
-          $('.B6').addClass('alive');
-          countB=countB+4;
-        });
-        $('.colBtn7').on('click', function() {
-          $('.colSpan').addClass('hide');
-          $('.B7').addClass('alive');
-          countB=countB+2;
-      });
-      $('.colBtn8').on('click', function() {
-          $('.colSpan').addClass('hide');
-          $('.B8').addClass('alive');
-          countB=countB+1;
-      });
-    });
-      
-    $('.rowBtnC').on('click', function () {
-      $('.rowSpan').addClass('hide');
-      var colQuestion = new Select("Pick a column:");
-        colQuestion.ask();
-        $('.colBtn1').on('click', function() {
-          $('.colSpan').addClass('hide');
-          $('.C1').addClass('alive');
-          countC=countC+128;
-        });
-        $('.colBtn2').on('click', function() {
-          $('.colSpan').addClass('hide');
-          $('.C2').addClass('alive');
-          countC=countC+64;
-        });
-        $('.colBtn3').on('click', function() {
-          $('.colSpan').addClass('hide');
-          $('.C3').addClass('alive');
-          countC=countC+32;
-        });
-        $('.colBtn4').on('click', function() {
-          $('.colSpan').addClass('hide');
-          $('.C4').addClass('alive');
-          countC=countC+16;
-        });
-        $('.colBtn5').on('click', function() {
-          $('.colSpan').addClass('hide');
-          $('.C5').addClass('alive');
-          countC=countC+8;
-        });
-        $('.colBtn6').on('click', function() {
-          $('.colSpan').addClass('hide');
-          $('.C6').addClass('alive');
-          countC=countC+4;
-        });
-        $('.colBtn7').on('click', function() {
-          $('.colSpan').addClass('hide');
-          $('.C7').addClass('alive');
-          countC=countC+2;
-      });
-      $('.colBtn8').on('click', function() {
-          $('.colSpan').addClass('hide');
-          $('.C8').addClass('alive');
-          countC=countC+1;
-      });
-      });
-  });
+ 
+ // highlight and count each bit with value based on position in byte
+ 
  $('.A8').on('click', function() {
    $('.A8').addClass('alive');
    countA=countA+128;
  });
+  $('.A7').on('click', function() {
+   $('.A7').addClass('alive');
+   countA=countA+64;
+ });
+  $('.A6').on('click', function() {
+   $('.A6').addClass('alive');
+   countA=countA+32;
+ });
+  $('.A5').on('click', function() {
+   $('.A5').addClass('alive');
+   countA=countA+16;
+ });
+  $('.A4').on('click', function() {
+   $('.A4').addClass('alive');
+   countA=countA+8;
+ });
+  $('.A3').on('click', function() {
+   $('.A3').addClass('alive');
+   countA=countA+4;
+ });
+  $('.A2').on('click', function() {
+   $('.A2').addClass('alive');
+   countA=countA+2;
+ });
+  $('.A1').on('click', function() {
+   $('.A1').addClass('alive');
+   countA=countA+1;
+ });
+ 
+ 
    
 </script>
 
