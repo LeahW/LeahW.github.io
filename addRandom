@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="In-browser JavaScript program allows you to input binary values in an octet byte format and then convert to see what those values would be in UTF-8 (Unicode, ASCII) and Decimal format">
+<meta name="author" content="Leah Williamson">
+ <meta name="viewport" content="width=device-width">
+<title>Byte Builder: An octet byte to UTF-8 and Decimal converter. </title>
+<link rel="stylesheet" type="text/css" href="/css/main.css">
+<style>
+.whitespace {
+  margin: 10px 40px;
+}
+.hide {
+  height: 1px;
+  width: 1px;
+}
+.board {
+  background: #582230;
+  color: #405290;
+}
+.block {
+  background: #503250;
+  color: #EDEDA3;
+}
+.block1 {
+  color: #FFADFF;
+  font-size: 130%;
+}
+.block2 {
+  color: #FFADFF;
+  font-size: 130%;
+}
+.block3 {
+  color: #FFADFF;
+  font-size: 130%;
+}
+.alive {
+  background: #66FF33;
+  color: #000000;
+}
+.hide {
+  height: 1px;
+  width: 1px;
+}
+</style>
+</head>
+<body>
+<div class="container well col-md-9 col-md-offset-1">
+<p class="lead"> Byte Builder</p>
+<li> Click on <b>dashes</b> to activate bits and create up to three octet bytes.</li>
+<li> The <b>UTF-8</b> button will display the character assigned to each byte.</li>
+<li> Use the <b>Calculate</b> button to show numeric values in Decimal format.</li>
+<br>
+<i>Note: Bytes with a Decimal value greater than 127 do not have an assigned UTF-8 value.</i>
+</div>
+<div class="container well col-md-9 col-md-offset-1">
+<div class="container col-md-8 col-md-offset-2 board">
+<div class="row container col-md-12">
+<br>
+<div class="row container col-md-2 block1">   </div>
+<div class="container col-md-1 block A8"> - </div>
+<div class="container col-md-1 block A7"> - </div>
+<div class="container col-md-1 block A6"> - </div>
+<div class="container col-md-1 block A5"> - </div>
+<div class="container col-md-1 block A4"> - </div>
+<div class="container col-md-1 block A3"> - </div>
+<div class="container col-md-1 block A2"> - </div>
+<div class="container col-md-1 block A1"> - </div>
+<div class="row container col-md-2 block"></div>
+<div class="row container col-md-2 block"> Count: <span class="countA"></span> </div>
+</div>
+
+<div class="row container col-md-12">
+<br>
+</div>
+
+<div class="row col-md-12">
+<br>
+<div class="row container col-md-2 block2">   </div>
+<div class="container col-md-1 block B8"> - </div>
+<div class="container col-md-1 block B7"> - </div>
+<div class="container col-md-1 block B6"> - </div>
+<div class="container col-md-1 block B5"> - </div>
+<div class="container col-md-1 block B4"> - </div>
+<div class="container col-md-1 block B3"> - </div>
+<div class="container col-md-1 block B2"> - </div>
+<div class="container col-md-1 block B1"> - </div>
+<div class="row container col-md-2 block"></div>
+<div class="row container col-md-2 block"> Count: <span class="countB"></span> </div>
+</div>
+
+<div class="row container col-md-12">
+<br>
+</div>
+
+<div class="row col-md-12">
+<br>
+<div class="row container col-md-2 block3">   </div>
+<div class="container col-md-1 block C8"> - </div>
+<div class="container col-md-1 block C7"> - </div>
+<div class="container col-md-1 block C6"> - </div>
+<div class="container col-md-1 block C5"> - </div>
+<div class="container col-md-1 block C4"> - </div>
+<div class="container col-md-1 block C3"> - </div>
+<div class="container col-md-1 block C2"> - </div>
+<div class="container col-md-1 block C1"> - </div>
+<div class="row container col-md-2 block"></div>
+<div class="row container col-md-2 block"> Count: <span class="countC"></span> </div>
+</div>
+
+<div class="row container col-md-12">
+<br>
+</div>
+<div class="row container col-md-12">
+  <br>
+</div>
+<div class="row container col-md-4">
+<button class='qb1'>UTF-8</button>
+<button class='qb4 hide'><a href="https://leahw.github.io/ByteBuilder.html">Reset</a></button>
+</div>
+<div class="row container col-md-6"></div>
+<div class="row container col-md-2">
+  <button class='qb2'>Calculate</button>
+  <button class='qb3 hide'><a href="https://leahw.github.io/ByteBuilder.html">Reset</a></button>
+</div>
+<div class="row container col-md-12">
+<br>
+</div>
+
+<div class="container col-md-10 col-md-offset-1">
+<p class='lead'>Back to <a href="https://leahw.github.io/"> leahw.github.io </a></p>
+</div>
+
+<script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+  <script>
+  // counters to hold value of each octet row
+ var countA = 0;
+ var countB = 0;
+ var countC = 0;
+ 
+ // show value of each counter
+  $('.qb2').on('click', function() {
+   $('.countA').append(countA);
+   $('.countB').append(countB);
+   $('.countC').append(countC);
+   $('.qb2').addClass('hide');
+   $('.qb3').removeClass('hide');
+ });
+ 
+ // highlight and count each bit with value based on position in byte
+ 
+ $('.A8').on('click', function() {
+   $('.A8').addClass('alive');
+   countA=countA+128;
+ });
+  $('.A7').on('click', function() {
+   $('.A7').addClass('alive');
+   countA=countA+64;
+ });
+  $('.A6').on('click', function() {
+   $('.A6').addClass('alive');
+   countA=countA+32;
+ });
+  $('.A5').on('click', function() {
+   $('.A5').addClass('alive');
+   countA=countA+16;
+ });
+  $('.A4').on('click', function() {
+   $('.A4').addClass('alive');
+   countA=countA+8;
+ });
+  $('.A3').on('click', function() {
+   $('.A3').addClass('alive');
+   countA=countA+4;
+ });
+  $('.A2').on('click', function() {
+   $('.A2').addClass('alive');
+   countA=countA+2;
+ });
+  $('.A1').on('click', function() {
+   $('.A1').addClass('alive');
+   countA=countA+1;
+ });
+ 
+ $('.B8').on('click', function() {
+   $('.B8').addClass('alive');
+   countB=countB+128;
+ });
+  $('.B7').on('click', function() {
+   $('.B7').addClass('alive');
+   countB=countB+64;
+ });
+  $('.B6').on('click', function() {
+   $('.B6').addClass('alive');
+   countB=countB+32;
+ });
+  $('.B5').on('click', function() {
+   $('.B5').addClass('alive');
+   countB=countB+16;
+ });
+  $('.B4').on('click', function() {
+   $('.B4').addClass('alive');
+   countB=countB+8;
+ });
+  $('.B3').on('click', function() {
+   $('.B3').addClass('alive');
+   countB=countB+4;
+ });
+  $('.B2').on('click', function() {
+   $('.B2').addClass('alive');
+   countB=countB+2;
+ });
+  $('.B1').on('click', function() {
+   $('.B1').addClass('alive');
+   countB=countB+1;
+ });
+ 
+ $('.C8').on('click', function() {
+   $('.C8').addClass('alive');
+   countC=countC+128;
+ });
+  $('.C7').on('click', function() {
+   $('.C7').addClass('alive');
+   countC=countC+64;
+ });
+  $('.C6').on('click', function() {
+   $('.C6').addClass('alive');
+   countC=countC+32;
+ });
+  $('.C5').on('click', function() {
+   $('.C5').addClass('alive');
+   countC=countC+16;
+ });
+  $('.C4').on('click', function() {
+   $('.C4').addClass('alive');
+   countC=countC+8;
+ });
+  $('.C3').on('click', function() {
+   $('.C3').addClass('alive');
+   countC=countC+4;
+ });
+  $('.C2').on('click', function() {
+   $('.C2').addClass('alive');
+   countC=countC+2;
+ });
+  $('.C1').on('click', function() {
+   $('.C1').addClass('alive');
+   countC=countC+1;
+ });
+ 
+ // UTF-8 lookup
+ var utf8 = ["NUL", "SOH", "STX", "ETX", "EOT", "ENQ", "ACK", "BEL", "BS", "HT", "LF", "VT", "FF", "CR", "SO", "SI", "DLE",
+  "DC1", "DC2", "DC3", "DC4", "NAK", "SYN", "ETB", "CAN", "EM", "SUB", "ESC", "FS", "GS", "RS", "US", "SP", "!", "\"", "#", "$",
+   "%", "&", "\'", "(", ")", "*", "+", ",", "-", ".", "/", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", ":", ";", "<",
+    "=", ">", "?", "@", "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", 
+    "U", "V", "W", "X", "Y", "Z", "[", "\\", "]", "^", "_", "`", "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", 
+    "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "{", "|", "}", "~", "DEL"];
+ 
+ $('.qb1').on('click', function() {
+   $('.block1').append(utf8[countA]);
+   $('.block2').append(utf8[countB]);
+   $('.block3').append(utf8[countC]);
+   $('.qb1').addClass('hide');
+ });
+ 
+   
+</script>
+
+</body>
