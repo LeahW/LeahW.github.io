@@ -14,6 +14,9 @@ color: orange;
 .go {
  background: green;
  }
+ button {
+  background: gray;
+ }
 </style>
 </head>
 <body>
@@ -28,7 +31,7 @@ Board
 <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
   <script>
-  $('roll').on('click', function() {
+  $('.roll').on('click', function() {
    $('.board').append(Math.random()*6);
    });
   </script>
