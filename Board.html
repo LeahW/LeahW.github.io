@@ -11,6 +11,9 @@
 background: blue;
 color: yellow;
 }
+.go {
+ background: green;
+ }
 </style>
 </head>
 <body>
@@ -19,7 +22,15 @@ color: yellow;
 Board
  <div class="board">
   Start
+  <button class="roll">Roll the Dice!</button>
  </div>
 </div>
+<script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+  <script>
+  $('roll').on ('click')function() {
+   $('.board').addClass('.go');
+    }
+  </script>
 </body>
 </html>
