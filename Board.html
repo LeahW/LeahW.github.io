@@ -32,17 +32,22 @@ Board
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
   <script>
   $('.roll').on('click', function() {
-   $('.board').append('<br>');
-   roll = (6*(Math.random());
-   switch (roll) {
-     case roll < 3:
-      $('.board').append('less than three');
-     case roll < 4:
-      $('.board').append('four');
-     case roll < 5:
-      $('.board').append('five');
-   };
-  });
+    switch (Math.random()*6) {
+      case 1:
+      case 2:
+      case 3:
+      default: 
+          $('.board').append("Looking forward to the Weekend");
+          break; 
+      case 4:
+      case 5:
+         $('.board').append("Soon it is Weekend");
+          break; 
+      case 0:
+      case 6:
+         $('.board').append("It is Weekend");
+    };
+}
   </script>
 </body>
 </html>
