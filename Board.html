@@ -33,13 +33,13 @@ Board
   <script>
   $('.roll').on('click', function() {
    $('.board').append('<br>');
-   roll = (6*(Math.random())
+   roll = (6*(Math.random());
    switch (roll) {
-     case < 3:
+     case roll < 3:
       $('.board').append('less than three');
-     case < 4:
+     case roll < 4:
       $('.board').append('four');
-     case < 5:
+     case roll < 5:
       $('.board').append('five');
    };
   });
