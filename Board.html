@@ -33,7 +33,8 @@ Board
   <script>
   $('.roll').on('click', function() {
    $('.board').append('<br>');
-   switch (6*(Math.random())) {
+   roll = (6*(Math.random())
+   switch (roll) {
      case < 3:
       $('.board').append('less than three');
      case < 4:
