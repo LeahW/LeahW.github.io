@@ -33,8 +33,14 @@ Board
   <script>
   $('.roll').on('click', function() {
    $('.board').append('<br>');
-   $('.board').append(6*(Math.random()));
-   });
+   switch ('.board').append(6*(Math.random()));
+     case < 3:
+      $('.board').append('less than three');
+     case < 4:
+      $('.board').append('four');
+     case < 5:
+      $('.board').append('five');
+     });
   </script>
 </body>
 </html>
