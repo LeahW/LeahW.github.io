@@ -34,13 +34,13 @@ Board
   $('.roll').on('click', function() {
    rando = Math.random()*6;
    $('.board').append(rando);
-   switch rando {
+   switch (rando) {
     case < 1:
-     $('.board').append("1");
+     $('.board').append("<br>");
     case < 2:
-     $('.board').append("2");
+     $('.board').append("<br>");
     case < 3:
-     $('.board').append("3");
+     $('.board').append("<br>");
    }
   });
   </script>
