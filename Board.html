@@ -33,6 +33,7 @@ Board
   <script>
   $('.roll').on('click', function() {
    rando = Math.random()*6;
+   $('.board').append(rando);
     switch (rando) {
       case <1:
        $('.board').append("1");
