@@ -43,19 +43,21 @@ Board
   <script>
   $('.roll').on('click', function() {
    rando = Math.random()*6;
+   count = 0;
    if (rando < 1) {
-     $('.board').append("<br> 1");
+     count = count+1;
    } else if (rando < 2) {
-     $('.board').append("<br> 2");
+     count = count+2;
    } else if (rando < 3) {
-     $('.board').append("<br> 3");
+     count = count+3;
    } else if (rando < 4) {
-     $('.board').append("<br> 4");
+     count = count+4;
    } else if (rando < 5) {
-     $('.board').append("<br> 5");
+     count = count+5;
    } else {
-    $('.board').append("<br> 6");
+    count = count+6;
    }
+   $('.board').append("<br>" + count);
   });
   </script>
 </body>
