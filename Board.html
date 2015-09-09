@@ -48,6 +48,10 @@ Board
   <div class="container col-md-1 block A14"> 14 </div>
   <div class="container col-md-1 block A15"> 15 </div>
   <div class="container col-md-1 block A16"> 16 </div>
+  <div class="container col-md-1 block A17"> 17 </div>
+  <div class="container col-md-1 block A18"> 18 </div>
+  <div class="container col-md-1 block A19"> 19 </div>
+  <div class="container col-md-1 block A20"> 20 </div>
  </div>
 </div>
 <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
@@ -117,8 +121,18 @@ Board
    } else if (count == 17) {
     $('.block').removeClass('alive');
     $('.A17').addClass('alive');
+    $('.block').removeClass('alive');
+   } else if (count == 18) {
+    $('.block').removeClass('alive');
+    $('.A18').addClass('alive');
+   } else if (count == 19) {
+    $('.block').removeClass('alive');
+    $('.A19').addClass('alive');
+   } else if (count == 20) {
+    $('.block').removeClass('alive');
+    $('.A20').addClass('alive');
    } else {
-    $('.board').append("Game over!");
+    $('.board').append("<br> Game over! <br>");
     count=0;
    };
   });
