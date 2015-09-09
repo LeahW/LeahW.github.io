@@ -55,6 +55,8 @@ Board
   <div class="container col-md-2 block A18"> 18 </div>
   <div class="container col-md-2 block A19"> 19 </div>
   <div class="container col-md-2 block A20"> 20 </div>
+  <br>
+  <div class="container col-md-10 winner"></div>
  </div>
 </div>
 <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
@@ -138,6 +140,7 @@ Board
     $('.block').removeClass('alive');
     $('.A20').addClass('alive');
    } else {
+    $('.winner').append("You win!!");
     $('.board').append("<br> Game over! <br>");
     count=0;
    };
