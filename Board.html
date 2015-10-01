@@ -26,7 +26,20 @@ color: orange;
 <body>
 <div class="container row col-md-12"><br></div>
 <div class="viewer">
+ Broadcasts:
  <iframe src="http://www.screenleap.com/2967/LeahW" width="800" height="600"></iframe>
+ Private Shares:
+ <div id="screenleapViewer" style="visibility:hidden"></div>
+<script type="text/javascript">
+    var screenleapCompanyId = 2967;
+    var screenleapApplyCompanyColorScheme = true;
+    var screenleapBaseUrl = 'http://www.screenleap.com';
+    (function() {
+        var sl = document.createElement('script'); sl.type = 'text/javascript'; sl.async = true;
+        sl.src = screenleapBaseUrl + '/js/screenleap-viewer.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(sl, s);
+    })();
+</script>
 </div>
 <div class="container well col-md-8 col-md-offset-2">
 Board
