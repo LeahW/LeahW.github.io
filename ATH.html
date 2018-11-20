@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="author"  content="Leah Williamson">
+<script src="js/sha1.min.js"> </script>
+<head>
+</head>
+<body>
+  <h1>
+Calculate the SHA1 hash of a number
+</h1>
+<form>
+  <input id="firstQ" type="number">
+  </input>
+  <p id="confirmA">
+  </p>
+  <span id="confirmB">
+  </span>
+</form>
+<script>
+var firstQu = document.getElementById("firstQ");
+var firstResponse =  "";
+firstQu.addEventListener('change', function(e) {
+  firstResponse = e.target.value;
+  finalResponse = firstResponse + "    your SHA1 hash is:    " + (sha1(firstResponse));
+    document.getElementById("confirmB").innerHTML =  "<br>" + finalResponse + "<br>";
+});
+</script>
+</body>
