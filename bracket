@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="description" content="Bracket selector">
+<meta name="author" content="Leah Williamson">
+<head>
+<title>bracket</title>
+</head>
+
+<body>
+<button id="Flip1" onclick="flip1 ()"> Single coin flip </button>
+<br>
+<span id="result1"> </span>
+<br>
+<button id="Flip2" onclick="flip2 ()">
+  Double coin flip </button>
+<br>
+<span id="result2"> </span>
+<br>
+<button id="Flip3" onclick="flip3 ()">
+  Triple coin flip </button>
+<br>
+<span id="result3"> </span>
+<br>
+
+<script>
+function flip1() {
+var rando = Math.random()*10;
+if (rando <= 5) {
+document.getElementById("result1").innerHTML = rando + "<br>" + "heads"}
+else {
+document.getElementById("result1").innerHTML = rando + "<br>" + "tails"}};
+
+function flip2() {
+var rando = (Math.random()*10 + Math.random()*10);
+if (rando <= 10) {
+document.getElementById("result2").innerHTML = rando + "<br>" + "heads"}
+else {
+document.getElementById("result2").innerHTML = rando + "<br>" + "tails"}};
+
+function flip3() {
+var rando = (Math.random()*10 + Math.random()*10 + Math.random()*10);
+if (rando <= 15) {
+document.getElementById("result3").innerHTML = rando + "<br>" + "heads"}
+else {
+document.getElementById("result3").innerHTML = rando + "<br>" + "tails"}}
+</script>
+
+</body>
+</html>
