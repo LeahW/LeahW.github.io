@@ -45,21 +45,21 @@ var team2seed = document.getElementById("team2").value;
 
 function flip1() {
 var rando = Math.random()*10;
-if (rando <= 3) {
+if (rando <= 2) {
 document.getElementById("decision").innerHTML = rando + "<br>" + "higher seed wins"}
 else {
 document.getElementById("decision").innerHTML = rando + "<br>" + "lower seed wins"}};
 
 function flip2() {
 var rando = (Math.random()*10 + Math.random()*10);
-if (rando <= 6) {
+if (rando <= 5) {
 document.getElementById("decision").innerHTML = rando + "<br>" + "higher seed wins"}
 else {
 document.getElementById("decision").innerHTML = rando + "<br>" + "lower seed wins"}};
 
 function flip3() {
 var rando = (Math.random()*10 + Math.random()*10 + Math.random()*10);
-if (rando <= 8) {
+if (rando <= 7) {
 document.getElementById("decision").innerHTML = rando + "<br>" + "higher seed wins"}
 else {
 document.getElementById("decision").innerHTML = rando + "<br>" + "lower seed wins"}}
@@ -68,7 +68,7 @@ function submit() {
 var team1seed = document.getElementById("team1").value;
 var team2seed = document.getElementById("team2").value;
 var result = (team1seed-team2seed);
-document.getElementById("submission").innerHTML = (result);
+document.getElementById("submission").innerHTML = ("difference in rank is: " + result);
 if (8 < result) {
 document.getElementById("comment").innerHTML = "triple coin flip";
 flip3();
