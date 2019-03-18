@@ -8,6 +8,22 @@
 <link rel="stylesheet" type="text/css" href="/css/main.css">
 </head>
 <body>
+<input name="team1" id="team1" type="number"> higher seed contender
+<br>
+<h1> vs. </h1>
+
+<input name="team2" id="team2" type="number"> lower seed contender
+<br>
+<br>
+<button id="submit" onclick="submit ()"> Submit </button>
+<br>
+<span id="submission"> </span>
+<br>
+<span id="comment"> </span>
+<br>
+<span id="decision"> </span>
+<hr>
+<br>
 <button id="Flip1" onclick="flip1 ()"> Single coin flip </button>
 <br>
 <span id="result1"> </span>
@@ -24,26 +40,46 @@
 <br>
 
 <script>
+var team1seed = document.getElementById("team1").value;
+var team2seed = document.getElementById("team2").value;
+
 function flip1() {
 var rando = Math.random()*10;
-if (rando <= 5) {
-document.getElementById("result1").innerHTML = rando + "<br>" + "heads"}
+if (rando <= 4) {
+document.getElementById("decision").innerHTML = rando + "<br>" + "higher seed wins"}
 else {
-document.getElementById("result1").innerHTML = rando + "<br>" + "tails"}};
+document.getElementById("decision").innerHTML = rando + "<br>" + "lower seed wins"}};
 
 function flip2() {
 var rando = (Math.random()*10 + Math.random()*10);
-if (rando <= 10) {
-document.getElementById("result2").innerHTML = rando + "<br>" + "heads"}
+if (rando <= 7) {
+document.getElementById("decision").innerHTML = rando + "<br>" + "higher seed wins"}
 else {
-document.getElementById("result2").innerHTML = rando + "<br>" + "tails"}};
+document.getElementById("decision").innerHTML = rando + "<br>" + "lower seed wins"}};
 
 function flip3() {
 var rando = (Math.random()*10 + Math.random()*10 + Math.random()*10);
-if (rando <= 15) {
-document.getElementById("result3").innerHTML = rando + "<br>" + "heads"}
+if (rando <= 11) {
+document.getElementById("decision").innerHTML = rando + "<br>" + "higher seed wins"}
 else {
-document.getElementById("result3").innerHTML = rando + "<br>" + "tails"}}
+document.getElementById("decision").innerHTML = rando + "<br>" + "lower seed wins"}}
+
+function submit() {
+var team1seed = document.getElementById("team1").value;
+var team2seed = document.getElementById("team2").value;
+var result = (team1seed-team2seed);
+document.getElementById("submission").innerHTML = (result);
+if (8 < result) {
+document.getElementById("comment").innerHTML = "triple coin flip";
+flip3();
+}
+else if (3 < result) {
+document.getElementById("comment").innerHTML = "double coin flip";
+flip2();
+}
+else {
+document.getElementById("comment").innerHTML = "single coin flip";}
+flip1(); }
 </script>
 
 </body>
