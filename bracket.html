@@ -45,21 +45,21 @@ var team2seed = document.getElementById("team2").value;
 
 function flip1() {
 var rando = Math.random()*10;
-if (rando <= 4) {
+if (rando <= 3) {
 document.getElementById("decision").innerHTML = rando + "<br>" + "higher seed wins"}
 else {
 document.getElementById("decision").innerHTML = rando + "<br>" + "lower seed wins"}};
 
 function flip2() {
 var rando = (Math.random()*10 + Math.random()*10);
-if (rando <= 7) {
+if (rando <= 6) {
 document.getElementById("decision").innerHTML = rando + "<br>" + "higher seed wins"}
 else {
 document.getElementById("decision").innerHTML = rando + "<br>" + "lower seed wins"}};
 
 function flip3() {
 var rando = (Math.random()*10 + Math.random()*10 + Math.random()*10);
-if (rando <= 9) {
+if (rando <= 8) {
 document.getElementById("decision").innerHTML = rando + "<br>" + "higher seed wins"}
 else {
 document.getElementById("decision").innerHTML = rando + "<br>" + "lower seed wins"}}
